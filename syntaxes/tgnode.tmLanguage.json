@@ -64,7 +64,7 @@
 		},
 		"keywords": {
 			"name": "keyword.control.tgnode",
-			"match": "^(?:\\s)*(varname|name|color|default|display|param|output|input)"
+			"match": "^(?:\\s)*(varname|name|color|default|display|show|param|output|input)"
 		},
 		"sections": {
 			"name": "entity.other.attribute.tgnode",
