@@ -3,17 +3,77 @@
 	"name": "TG Node Language",
 	"patterns": [
 		{
+			"include": "#strings"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#comments"
+		},
+		{
 			"include": "#keywords"
 		},
 		{
-			"include": "#strings"
+			"include": "#types"
+		},
+		{
+			"include": "#sections"
+		},
+		{
+			"include": "#lua"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#operators"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"lua": {
+			"begin": "{",
 			"patterns": [{
-				"name": "keyword.control.tgnode",
-				"match": "\\b(if|while|for|return)\\b"
+				"include": "source.lua"
+			}],
+			"end": "}"
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.language.tgnode",
+					"match": "\\b[0-9]+\\b"
+				},
+				{
+					"name": "constant.language.tgnode",
+					"match": "\\b0x([0-9]*[a-z]*[A-Z]*)*\\b"
+				},
+				{
+					"name": "constant.language.tgnode",
+					"match": "\\b[0-9]+\\.[0-9]+\\b"
+				},
+				{
+					"name": "constant.language.tgnode",
+					"match": "\\b(true|false)"
+				}
+			]
+		},
+		"types": {
+			"name": "storage.type.tgnode",
+			"match": "\\b(color|tex|int|bool|float)\\b"
+		},
+		"keywords": {
+			"name": "keyword.control.tgnode",
+			"match": "^(?:\\s)*(varname|name|color|default|display|param|output|input)"
+		},
+		"sections": {
+			"name": "entity.other.attribute.tgnode",
+			"match": "^(metadata|exec)(?:\\s)*\n?"
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.tgnode",
+				"match": "(?:^[ \t]+)?(#).*$\n?"
 			}]
 		},
 		"strings": {
@@ -26,6 +86,14 @@
 					"match": "\\\\."
 				}
 			]
+		},
+		"variables": {
+			"name": "variable.name.tgnode",
+			"match": "(?<=\\s|^)(?:(?!color|int|float|bool|tex|==|!=|>=|<=|<|>)\\S)*(?=\\s|$)"
+		},
+		"operators": {
+			"name": "keyword.operator.tgnode",
+			"match": "(?:\\s)*(==|!=|>=|<=|>|<)(?:\\s)*"
 		}
 	},
 	"scopeName": "source.tgnode"
