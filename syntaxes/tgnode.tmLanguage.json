@@ -60,7 +60,7 @@
 		},
 		"types": {
 			"name": "storage.type.tgnode",
-			"match": "\\b(color|tex|int|bool|float)\\b"
+			"match": "\\b(color|tex|int|bool|float|string)\\b"
 		},
 		"keywords": {
 			"name": "keyword.control.tgnode",
@@ -89,7 +89,7 @@
 		},
 		"variables": {
 			"name": "variable.name.tgnode",
-			"match": "(?<=\\s|^)(?:(?!color|int|float|bool|tex|==|!=|>=|<=|<|>)\\S)*(?=\\s|$)"
+			"match": "(?<=\\s|^)(?:(?!color|int|float|bool|tex|string|==|!=|>=|<=|<|>)\\S)*(?=\\s|$)"
 		},
 		"operators": {
 			"name": "keyword.operator.tgnode",
