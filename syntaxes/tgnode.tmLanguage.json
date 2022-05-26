@@ -60,7 +60,7 @@
 		},
 		"types": {
 			"name": "storage.type.tgnode",
-			"match": "\\b(color|tex|int|bool|float|string)\\b"
+			"match": "\\b(color|greytex|colortex|int|bool|float|string)\\b"
 		},
 		"keywords": {
 			"name": "keyword.control.tgnode",
