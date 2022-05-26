@@ -1,6 +1,11 @@
 # tgnl README
+> This is for VSCode. A VS2022 extension will come in the future.
 
-This is extension adds syntax support for the Texture Graph Node Language (https://github.com/oxi-dev0/Texture-Graph).
+This is extension adds syntax support for the Texture Graph Node Language (https://github.com/oxi-dev0/Texture-Graph).  
+
+## Installation
+
+Download this repo, and then put it's unzipped folder into `C:\Users\[USER]\.vscode\extensions`. Restart VSCode and it should work!  
 
 ## Features
 
