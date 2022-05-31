@@ -32,11 +32,13 @@
 	],
 	"repository": {
 		"lua": {
-			"begin": "{",
-			"patterns": [{
-				"include": "source.lua"
-			}],
-			"end": "}"
+			"begin": "^(\\s)*{",
+			"patterns": [
+				{
+					"include": "source.lua"
+				}
+			],
+			"end": "^(\\s)*}"
 		},
 		"constants": {
 			"patterns": [
